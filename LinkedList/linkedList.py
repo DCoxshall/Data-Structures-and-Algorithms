@@ -1,3 +1,5 @@
+# Example of a doubly linked list concept in python
+
 class LinkedList:
     class Node:
         def __init__(self, data):
