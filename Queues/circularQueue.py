@@ -16,7 +16,6 @@ class circleQueue:
             if self.tail == self.capacity:
                 self.tail = 0
             self.size += 1
-            print(self.body)
 
     def dequeue(self):
         if self.size == 0:
@@ -31,4 +30,14 @@ class circleQueue:
             return data
 
     def __str__(self):
-        return str(self.body)
+        string_list = str(self.body)
+        body_copy = self.body
+        body_copy[self.head] = "^"
+        string_body_copy = list(str(body_copy))
+        for i in range(len(string_body_copy)):
+            if string_body_copy[i] != "^":
+                string_body_copy[i] = " "
+    
+        return string_list + "\n" + ''.join(string_body_copy)[1:]
+        top = ""
+        pntr = 0
