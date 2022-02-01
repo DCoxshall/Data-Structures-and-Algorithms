@@ -1,11 +1,11 @@
 graph = {
-        "A": {"B": 5},
-        "B": {"A": 5, "C": 5, "F": 1},
-        "C": {"B": 5, "D": 5, "E": 5},
-        "D": {"C": 5, "F": 1},
-        "E": {"C": 5},
-        "F": {"B": 1, "D": 1}
-    }
+    "A": {"B": 5},
+    "B": {"A": 5, "C": 5, "F": 1},
+    "C": {"B": 5, "D": 5, "E": 5},
+    "D": {"C": 5, "F": 1},
+    "E": {"C": 5},
+    "F": {"B": 1, "D": 1}
+}
 cost = {node: 0 for node in graph}
 known = [input("Please input a node to start at: ")]
 paths = {node: [] for node in graph}

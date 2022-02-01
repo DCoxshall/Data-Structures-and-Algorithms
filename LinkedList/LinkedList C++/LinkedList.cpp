@@ -1,19 +1,16 @@
 #include "LinkedList.hpp"
 
-LinkedList::LinkedList()
-{
+LinkedList::LinkedList() {
     size = 0;
     head = 0;
     tail = 0;
 }
 
-int LinkedList::peek()
-{
+int LinkedList::peek() {
     return tail->data;
 }
 
-int LinkedList::pop()
-{
+int LinkedList::pop() {
     int popData = tail->data;
     tail = tail->prev;
     delete tail->next;
@@ -22,16 +19,12 @@ int LinkedList::pop()
     return popData;
 }
 
-void LinkedList::push(int data)
-{
-    if (size == 0)
-    {
+void LinkedList::push(int data) {
+    if (size == 0) {
         Node newNode = Node(data);
         head = &newNode;
         tail = &newNode;
-    }
-    else if (size == 1)
-    {
+    } else if (size == 1) {
         Node newNode = Node(data);
         tail->next = &newNode;
         newNode.prev = tail;
@@ -47,17 +40,14 @@ void LinkedList::push(int data)
     size++;
 }
 
-std::ostream &operator<<(std::ostream &os, const LinkedList &list)
-{
+std::ostream &operator<<(std::ostream &os, const LinkedList &list) {
     os << "[";
     Node *currentNode = list.head;
-    while (currentNode != nullptr)
-    {
+    while (currentNode != nullptr) {
         os << currentNode->data;
         currentNode = currentNode->next;
 
-        if (currentNode != nullptr)
-        {
+        if (currentNode != nullptr) {
             os << ", ";
         }
     }

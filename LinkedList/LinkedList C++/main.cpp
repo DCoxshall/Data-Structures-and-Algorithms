@@ -1,7 +1,6 @@
 #include "LinkedList.hpp"
 
-int main()
-{
+int main() {
     LinkedList bob = LinkedList();
     bob.push(0);
     bob.push(1);
