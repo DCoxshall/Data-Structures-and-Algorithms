@@ -5,7 +5,6 @@
 # {a: {b: z, c: y}} where a, b, and c are elements and z and y are one-way
 # connections to b and c from a.
 
-from abc import abstractproperty
 import random
 
 
