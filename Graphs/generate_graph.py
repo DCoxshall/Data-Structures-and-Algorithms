@@ -1,3 +1,5 @@
+# This file generates AND PLOTS a graph. Not recommended for use with any graph traversal algorithms
+
 import random
 import math
 
